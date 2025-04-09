@@ -44,7 +44,22 @@
             background: #023e8a;
             display: flex;
             justify-content: center;
-            padding: 1rem;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        nav > div {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav img {
+            height: 50px;
+            margin-right: 2rem;
         }
 
         nav a {
@@ -104,16 +119,21 @@
     </style>
 </head>
 <body>
+    <nav>
+        <div>
+            <img src="logo.png" alt="Sirocco Travel Logo">
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="#about">About</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <h1>Welcome to Sirocco Travel</h1>
         <p>Luxury travel experiences with a breeze of adventure</p>
     </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#destinations">Destinations</a>
-        <a href="#contact">Contact</a>
-    </nav>
 
     <section id="about">
         <h2>About Us</h2>
