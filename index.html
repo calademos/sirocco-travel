@@ -1,196 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Luxury travel experiences to exotic destinations — curated for unforgettable memories.">
-    <title>Sirocco Travel</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #121212;
-            --accent: #d4af37;
-            --light-bg: #fdf6e3;
-            --text-light: #ffffff;
-            --hover-accent: #f0e6c8;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Luxury travel experiences to exotic destinations — curated for unforgettable memories.">
+  <title>Sirocco Travel</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #121212;
+      --accent: #d4af37;
+      --light-bg: #fdf6e3;
+      --text-light: #ffffff;
+      --hover-accent: #f0e6c8;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: 'Cinzel', serif;
-            line-height: 1.6;
-            background-color: var(--light-bg);
-            color: #333;
-        }
+    body {
+      font-family: 'Cinzel', serif;
+      line-height: 1.6;
+      background-color: var(--light-bg);
+      color: #333;
+      scroll-behavior: smooth;
+    }
 
-        nav {
-            background: var(--primary);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem 0;
-        }
+    nav {
+      background: var(--primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
 
-        nav > div {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+    nav > div {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
 
-        nav img {
-            height: 100px;
-            margin-right: 2rem;
-            max-width: 100%;
-        }
+    nav img {
+      height: 100px;
+      margin-right: 2rem;
+      max-width: 100%;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-        }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
 
-        nav a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            font-size: 1.1rem;
-        }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+    }
 
-        nav a:hover {
-            color: var(--hover-accent);
-            text-decoration: underline;
-        }
+    nav a:hover {
+      color: var(--hover-accent);
+      text-decoration: underline;
+    }
 
-        header {
-            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format') no-repeat center center/cover;
-            height: 100vh;
-            color: var(--text-light);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-        }
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format') no-repeat center center/cover;
+      height: 100vh;
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-        }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
 
-        header p {
-            font-size: 1.25rem;
-            max-width: 600px;
-        }
+    header p {
+      font-size: 1.25rem;
+      max-width: 600px;
+    }
 
-        main {
-            padding: 0;
-        }
+    .cta-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--accent);
+      color: var(--primary);
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-        section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: auto;
-        }
+    .cta-button:hover {
+      background-color: var(--hover-accent);
+      transform: translateY(-2px);
+    }
 
-        #about, #destinations {
-            color: white;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            padding: 4rem 2rem;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-        }
+    main {
+      padding: 0;
+    }
 
-        #about {
-            background: url('https://plus.unsplash.com/premium_photo-1697729707449-8de5d66c5a83?w=1200&auto=format') no-repeat center center/cover;
-        }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        #destinations {
-            background: url('https://plus.unsplash.com/premium_photo-1702598903204-cb02a8271097?w=1200&auto=format') no-repeat center center/cover;
-        }
+    #about, #destinations {
+      color: white;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      padding: 4rem 2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
 
-        #contact {
-            background: var(--light-bg);
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 2rem;
-        }
+    #about {
+      background: url('https://plus.unsplash.com/premium_photo-1697729707449-8de5d66c5a83?w=1200&auto=format') no-repeat center center/cover;
+    }
 
-        footer {
-            background: var(--primary);
-            color: var(--accent);
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-        }
+    #destinations {
+      background: url('https://plus.unsplash.com/premium_photo-1702598903204-cb02a8271097?w=1200&auto=format') no-repeat center center/cover;
+    }
 
-        @media(max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
+    #contact {
+      background: var(--light-bg);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 2rem;
+    }
 
-            section {
-                padding: 2rem 1rem;
-            }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
 
-            nav img {
-                height: 80px;
-            }
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+    }
 
-            .nav-links {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
+    button[type="submit"] {
+      background-color: var(--accent);
+      color: var(--primary);
+      font-weight: bold;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: var(--hover-accent);
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--accent);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      nav img {
+        height: 80px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav aria-label="Main navigation">
-        <div>
-            <img src="logo.png" alt="Sirocco Travel Logo">
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#destinations">Destinations</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+  <nav aria-label="Main navigation">
+    <div>
+      <img src="logo.png" alt="Sirocco Travel Logo">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <header>
-        <h1>Welcome to Sirocco Travel</h1>
-        <p>Luxury travel experiences with a breeze of adventure</p>
-    </header>
+  <header>
+    <h1 data-aos="fade-up">Welcome to Sirocco Travel</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Luxury travel experiences with a breeze of adventure</p>
+  </header>
 
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Sirocco Travel specializes in curating unforgettable luxury travel experiences to exotic and off-the-beaten-path destinations. Whether you're planning a romantic getaway, an adventurous escape, or a relaxing retreat, we handle every detail so you can focus on making memories.</p>
-        </section>
+  <main>
+    <section id="about" data-aos="fade-right">
+      <h2>About Us</h2>
+      <p>Sirocco Travel specializes in curating unforgettable luxury travel experiences to exotic and off-the-beaten-path destinations. Whether you're planning a romantic getaway, an adventurous escape, or a relaxing retreat, we handle every detail so you can focus on making memories.</p>
+    </section>
 
-        <section id="destinations">
-            <h2>Our Destinations</h2>
-            <p>Explore handpicked destinations like Santorini, the Amalfi Coast, Patagonia, Kyoto, and the Maldives — all customized to your travel style and preferences.</p>
-        </section>
+    <section id="destinations" data-aos="fade-left">
+      <h2>Our Destinations</h2>
+      <p>Explore handpicked destinations like Santorini, the Amalfi Coast, Patagonia, Kyoto, and the Maldives — all customized to your travel style and preferences.</p>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p> 
-        </section>
-    </main>
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
+  </footer>
+
+  <!-- Book Now Button -->
+  <a href="#contact" class="cta-button">Book Now</a>
+
+  <!-- Scroll animations -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
 </body>
 </html>
