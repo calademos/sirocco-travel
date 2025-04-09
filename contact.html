@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Sirocco Travel</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #121212;
+      --accent: #d4af37;
+      --light-bg: #fdf6e3;
+      --text-light: #ffffff;
+      --hover-accent: #f0e6c8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cinzel', serif;
+      background-color: var(--light-bg);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background: var(--primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    nav > div {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav img {
+      height: 100px;
+      margin-right: 2rem;
+      max-width: 100%;
+      padding: 3px;
+      background: linear-gradient(145deg, #d4af37, #bfa14d);
+      border-radius: 8px;
+      box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.4),
+        inset 0 0 6px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav img:hover {
+      transform: scale(1.04);
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--hover-accent);
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--accent);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      nav img {
+        height: 80px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <a href="index.html"><img src="logo.png" alt="Sirocco Travel Logo" /></a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Contact Us</h1>
+    <p>Fill out the form below and our team will be in touch shortly.</p>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdp0oxf7W6pFGfZq7si1lH0UVe8tiyDswWfBEbOiqY2ss5b7w/viewform?embedded=true"
+      allowfullscreen
+    >
+      Loading…
+    </iframe>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
