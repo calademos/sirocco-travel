@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sirocco Travel</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: url('hero.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
+    header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    header p { font-size: 1.25rem; max-width: 600px; }
+    nav {
+      background: #023e8a;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    #about {
+      background: url('about.jpg') no-repeat center center/cover;
+      color: white;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      padding: 4rem 2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    #destinations {
+      background: url('destinations.jpg') no-repeat center center/cover;
+      color: white;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      padding: 4rem 2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    #contact {
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    footer {
+      background: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    @media(max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      section { padding: 2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Sirocco Travel</h1>
+    <p>Luxury travel experiences with a breeze of adventure</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Sirocco Travel specializes in curating unforgettable luxury travel experiences to exotic and off-the-beaten-path destinations. Whether you're planning a romantic getaway, an adventurous escape, or a relaxing retreat, we handle every detail so you can focus on making memories.</p>
+  </section>
+  <section id="destinations">
+    <h2>Our Destinations</h2>
+    <p>Explore handpicked destinations like Santorini, the Amalfi Coast, Patagonia, Kyoto, and the Maldives — all customized to your travel style and preferences.</p>
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email us at <a href="mailto:info@sirocco.travel">info@sirocco.travel</a> or call us at (123) 456-7890 to start planning your next journey.</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
