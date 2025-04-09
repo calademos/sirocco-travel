@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Luxury travel experiences to exotic destinations — curated for unforgettable memories.">
     <title>Sirocco Travel</title>
     <style>
+        :root {
+            --primary: #0077b6;
+            --nav-bg: #023e8a;
+            --light-bg: #f8f9fa;
+            --text-light: #ffffff;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -18,9 +26,9 @@
         }
 
         header {
-            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format') no-repeat center center/cover;
             height: 100vh;
-            color: white;
+            color: var(--text-light);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -41,7 +49,7 @@
         }
 
         nav {
-            background: #0077b6;
+            background: var(--primary);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -60,13 +68,28 @@
         nav img {
             height: 150px;
             margin-right: 2rem;
+            max-width: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
         }
 
         nav a {
-            color: white;
-            margin: 0 1rem;
+            color: var(--text-light);
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffdd57;
+        }
+
+        main {
+            padding: 0;
         }
 
         section {
@@ -76,7 +99,7 @@
         }
 
         #about {
-            background: url('https://plus.unsplash.com/premium_photo-1697729707449-8de5d66c5a83?q=80&w=2964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            background: url('https://plus.unsplash.com/premium_photo-1697729707449-8de5d66c5a83?w=1200&auto=format') no-repeat center center/cover;
             color: white;
             border-radius: 10px;
             margin-bottom: 2rem;
@@ -85,7 +108,7 @@
         }
 
         #destinations {
-            background: url('https://plus.unsplash.com/premium_photo-1702598903204-cb02a8271097?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            background: url('https://plus.unsplash.com/premium_photo-1702598903204-cb02a8271097?w=1200&auto=format') no-repeat center center/cover;
             color: white;
             border-radius: 10px;
             margin-bottom: 2rem;
@@ -94,14 +117,14 @@
         }
 
         #contact {
-            background: #f8f9fa;
+            background: var(--light-bg);
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 2rem;
         }
 
         footer {
-            background: #0077b6;
+            background: var(--primary);
             color: white;
             text-align: center;
             padding: 1rem;
@@ -115,14 +138,18 @@
             section {
                 padding: 2rem 1rem;
             }
+
+            nav img {
+                height: 80px;
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
+    <nav aria-label="Main navigation">
         <div>
             <img src="logo.png" alt="Sirocco Travel Logo">
-            <div style="display: flex; gap: 1.5rem;">
+            <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#destinations">Destinations</a>
                 <a href="#contact">Contact</a>
@@ -135,20 +162,22 @@
         <p>Luxury travel experiences with a breeze of adventure</p>
     </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Sirocco Travel specializes in curating unforgettable luxury travel experiences to exotic and off-the-beaten-path destinations. Whether you're planning a romantic getaway, an adventurous escape, or a relaxing retreat, we handle every detail so you can focus on making memories.</p>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Sirocco Travel specializes in curating unforgettable luxury travel experiences to exotic and off-the-beaten-path destinations. Whether you're planning a romantic getaway, an adventurous escape, or a relaxing retreat, we handle every detail so you can focus on making memories.</p>
+        </section>
 
-    <section id="destinations">
-        <h2>Our Destinations</h2>
-        <p>Explore handpicked destinations like Santorini, the Amalfi Coast, Patagonia, Kyoto, and the Maldives — all customized to your travel style and preferences.</p>
-    </section>
+        <section id="destinations">
+            <h2>Our Destinations</h2>
+            <p>Explore handpicked destinations like Santorini, the Amalfi Coast, Patagonia, Kyoto, and the Maldives — all customized to your travel style and preferences.</p>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p>
-    </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
