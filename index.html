@@ -158,41 +158,11 @@
       background: url('https://plus.unsplash.com/premium_photo-1702598903204-cb02a8271097?w=1200&auto=format') no-repeat center center/cover;
     }
 
-    #contact {
-      background: var(--light-bg);
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 2rem;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: 'Cinzel', serif;
-      font-size: 1rem;
-    }
-
-    button[type="submit"] {
-      background-color: var(--accent);
-      color: var(--primary);
-      font-weight: bold;
-      padding: 0.75rem;
+    #contact iframe {
+      width: 100%;
+      height: 700px;
       border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button[type="submit"]:hover {
-      background-color: var(--hover-accent);
+      border-radius: 12px;
     }
 
     footer {
@@ -254,12 +224,15 @@
     <section id="contact" data-aos="fade-up">
       <h2>Contact Us</h2>
       <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdp0oxf7W6pFGfZq7si1lH0UVe8tiyDswWfBEbOiqY2ss5b7w/viewform?embedded=true"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+      >
+        Loading…
+      </iframe>
     </section>
   </main>
 
@@ -270,7 +243,7 @@
   <!-- Book Now Button -->
   <a href="#contact" class="cta-button">Book Now</a>
 
-  <!-- Scroll animations -->
+  <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
