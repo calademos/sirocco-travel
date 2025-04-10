@@ -61,12 +61,16 @@
     }
 
     nav {
-      background: var(--primary);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem 0;
-    }
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
 
     nav > div {
       display: flex;
