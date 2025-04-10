@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery - Sirocco Travel</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #121212;
+      --accent: #d4af37;
+      --light-bg: #fdf6e3;
+      --text-light: #ffffff;
+      --hover-accent: #f0e6c8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cinzel', serif;
+      background-color: var(--light-bg);
+      color: #333;
+    }
+
+    nav {
+      background: var(--primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    nav > div {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav img {
+      height: 100px;
+      margin-right: 2rem;
+      padding: 3px;
+      background: linear-gradient(145deg, #d4af37, #bfa14d);
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--hover-accent);
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    iframe.lightwidget-widget {
+      width: 100%;
+      min-height: 600px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: var(--accent);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    .instagram-link {
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .instagram-link i {
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .instagram-link:hover {
+      color: #ffd700;
+    }
+
+    .instagram-link:hover i {
+      color: #ffd700;
+    }
+
+    @media (max-width: 768px) {
+      nav img {
+        height: 80px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <a href="index.html"><img src="logo.png" alt="Sirocco Travel Logo" /></a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Photo Gallery</h1>
+    <p>Browse photos from our unforgettable trips and adventures around the world.</p>
+
+    <!-- Instagram Feed from LightWidget -->
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+    <iframe src="//lightwidget.com/widgets/23764f7a9f6d57eb8f1b32aab06f2cff.html" 
+            scrolling="no" 
+            allowtransparency="true" 
+            class="lightwidget-widget">
+    </iframe>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
+    <p>
+      <a href="https://www.instagram.com/sirocco_photo" class="instagram-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Follow us on Instagram
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
