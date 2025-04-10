@@ -30,12 +30,6 @@
       background-color: var(--light-bg);
       color: #333;
       scroll-behavior: smooth;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-
-    body.loaded {
-      opacity: 1;
     }
 
     .logo-intro {
@@ -309,17 +303,13 @@
       once: true,
     });
 
-    // Logo Intro Animation + Site Fade In
+    // Logo Intro Animation
     const logoIntro = document.getElementById('logoIntro');
-    const body = document.body;
-
     setTimeout(() => {
       logoIntro.classList.add('shrink');
     }, 500);
-
     setTimeout(() => {
       logoIntro.classList.add('fade-out');
-      body.classList.add('loaded');
     }, 1800);
   </script>
 </body>
