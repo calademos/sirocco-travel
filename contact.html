@@ -102,7 +102,16 @@
       margin-bottom: 2rem;
     }
 
-    iframe {
+    .form-wrapper {
+      background: #fffef9;
+      border: 2px solid var(--accent);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .form-wrapper iframe {
       width: 100%;
       height: 700px;
       border: none;
@@ -174,12 +183,15 @@
   <main>
     <h1>Contact Us</h1>
     <p>Fill out the form below and our team will be in touch shortly.</p>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdp0oxf7W6pFGfZq7si1lH0UVe8tiyDswWfBEbOiqY2ss5b7w/viewform?embedded=true"
-      allowfullscreen
-    >
-      Loading…
-    </iframe>
+
+    <div class="form-wrapper">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdp0oxf7W6pFGfZq7si1lH0UVe8tiyDswWfBEbOiqY2ss5b7w/viewform?embedded=true"
+        allowfullscreen
+      >
+        Loading…
+      </iframe>
+    </div>
   </main>
 
   <footer>
