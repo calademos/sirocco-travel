@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sirocco Travel Apparel</title>
+  <script defer>
+    function toggleNav() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('hidden');
+    }
+  </script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <style>
@@ -29,9 +35,7 @@
       padding: 0 1rem;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      gap: 2rem;
-      flex-wrap: wrap;
+      justify-content: space-between;
     }
     .nav-logo img {
       height: 80px;
@@ -49,11 +53,6 @@
         0 8px 20px rgba(0, 0, 0, 0.5),
         inset 0 0 8px rgba(255, 255, 255, 0.3);
     }
-    .nav-links {
-      display: flex;
-      flex-direction: row;
-      gap: 1.5rem;
-    }
     .nav-links a {
       color: #d4af37;
       text-decoration: none;
@@ -65,20 +64,23 @@
       color: #f0e6c8;
       text-decoration: underline;
     }
+    .menu-button {
+      display: none;
+      background: none;
+      color: #d4af37;
+      font-size: 1.5rem;
+      border: none;
+    }
     @media (max-width: 768px) {
-      .nav-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .nav-logo img {
-        height: 70px;
-        margin-bottom: 0.5rem;
+      .menu-button {
+        display: block;
       }
       .nav-links {
         flex-direction: column;
+        gap: 1rem;
         width: 100%;
         margin-top: 0.5rem;
-        align-items: center;
+        text-align: center;
       }
     }
   </style>
@@ -90,7 +92,8 @@
       <a href="index.html" class="nav-logo">
         <img src="logo.png" alt="Sirocco Travel Logo" />
       </a>
-      <div class="nav-links">
+      <button class="menu-button" onclick="toggleNav()">☰</button>
+      <div id="nav-links" class="nav-links hidden md:flex">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="destinations.html">Destinations</a>
@@ -113,7 +116,7 @@
     <h2 class="text-3xl font-semibold text-center mb-12">Our Curated Luxury Collection</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-        <img src="hat1.png" alt="White Luxury Cap" class="w-full h-72 object-cover" loading="lazy">
+        <img src="hat2.png" alt="White Luxury Cap" class="w-full h-72 object-cover" loading="lazy">
         <div class="p-4">
           <h3 class="text-xl font-semibold">White Logo Cap</h3>
           <p class="text-gray-600">A stylish, high-end cap perfect for sunny beach days.</p>
@@ -127,7 +130,7 @@
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-        <img src="robe.png" alt="Lake Como Robe" class="w-full h-72 object-cover" loading="lazy">
+        <img src="robe2.png" alt="Lake Como Robe" class="w-full h-72 object-cover" loading="lazy">
         <div class="p-4">
           <h3 class="text-xl font-semibold">Lake Como Robe</h3>
           <p class="text-gray-600">Luxury hotel robe near the lake, embroidered with the Sirocco Travel logo.</p>
