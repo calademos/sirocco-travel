@@ -30,6 +30,12 @@
       background-color: var(--light-bg);
       color: #333;
       scroll-behavior: smooth;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    body.loaded {
+      opacity: 1;
     }
 
     .logo-intro {
@@ -38,7 +44,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: var(--light-bg);
+      background-color: #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -303,13 +309,17 @@
       once: true,
     });
 
-    // Logo Intro Animation
+    // Logo Intro Animation + Site Fade In
     const logoIntro = document.getElementById('logoIntro');
+    const body = document.body;
+
     setTimeout(() => {
       logoIntro.classList.add('shrink');
     }, 500);
+
     setTimeout(() => {
       logoIntro.classList.add('fade-out');
+      body.classList.add('loaded');
     }, 1800);
   </script>
 </body>
