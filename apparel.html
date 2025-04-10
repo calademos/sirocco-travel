@@ -53,6 +53,10 @@
         0 8px 20px rgba(0, 0, 0, 0.5),
         inset 0 0 8px rgba(255, 255, 255, 0.3);
     }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
     .nav-links a {
       color: #d4af37;
       text-decoration: none;
@@ -76,11 +80,15 @@
         display: block;
       }
       .nav-links {
+        display: none;
         flex-direction: column;
         gap: 1rem;
         width: 100%;
         margin-top: 0.5rem;
         text-align: center;
+      }
+      .nav-links.show {
+        display: flex;
       }
     }
   </style>
@@ -92,8 +100,8 @@
       <a href="index.html" class="nav-logo">
         <img src="logo.png" alt="Sirocco Travel Logo" />
       </a>
-      <button class="menu-button" onclick="toggleNav()">☰</button>
-      <div id="nav-links" class="nav-links hidden md:flex">
+      <button class="menu-button md:hidden" onclick="document.getElementById('nav-links').classList.toggle('show')">☰</button>
+      <div id="nav-links" class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="destinations.html">Destinations</a>
@@ -130,7 +138,7 @@
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-        <img src="robe2.png" alt="Lake Como Robe" class="w-full h-72 object-cover" loading="lazy">
+        <img src="robe1.png" alt="Lake Como Robe" class="w-full h-72 object-cover" loading="lazy">
         <div class="p-4">
           <h3 class="text-xl font-semibold">Lake Como Robe</h3>
           <p class="text-gray-600">Luxury hotel robe near the lake, embroidered with the Sirocco Travel logo.</p>
