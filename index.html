@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Luxury travel experiences to exotic destinations — curated for unforgettable memories.">
-  <title>Sirocco Travel</title>
+  <title>Contact Us - Sirocco Travel</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
@@ -26,7 +24,6 @@
 
     body {
       font-family: 'Cinzel', serif;
-      line-height: 1.6;
       background-color: var(--light-bg);
       color: #333;
       scroll-behavior: smooth;
@@ -62,15 +59,11 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-nav img:hover {
-  transform: scale(1.04);
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.5),
-    inset 0 0 8px rgba(255, 255, 255, 0.3);
-}
-
-}
-
+    nav img:hover {
+      transform: scale(1.04);
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 8px rgba(255, 255, 255, 0.3);
     }
 
     .nav-links {
@@ -82,8 +75,8 @@ nav img:hover {
       color: var(--accent);
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
       font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -91,80 +84,38 @@ nav img:hover {
       text-decoration: underline;
     }
 
-    header {
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format') no-repeat center center/cover;
-      height: 100vh;
-      color: var(--text-light);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-
-    header p {
-      font-size: 1.25rem;
-      max-width: 600px;
-    }
-
-    .cta-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: var(--accent);
-      color: var(--primary);
-      padding: 0.75rem 1.5rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .cta-button:hover {
-      background-color: var(--hover-accent);
-      transform: translateY(-2px);
-    }
-
     main {
-      padding: 0;
-    }
-
-    section {
       padding: 4rem 2rem;
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
-    }
-
-    #about, #destinations {
-      color: white;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      padding: 4rem 2rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-    }
-
-    #about {
-      background: url('https://plus.unsplash.com/premium_photo-1697729707449-8de5d66c5a83?w=1200&auto=format') no-repeat center center/cover;
-    }
-
-    #destinations {
-      background: url('https://plus.unsplash.com/premium_photo-1702598903204-cb02a8271097?w=1200&auto=format') no-repeat center center/cover;
-    }
-
-    #contact {
       text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-wrapper {
+      background: #fffef9;
+      border: 2px solid var(--accent);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .form-wrapper iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 12px;
     }
 
     footer {
@@ -173,6 +124,7 @@ nav img:hover {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
 
     .instagram-link {
@@ -197,15 +149,7 @@ nav img:hover {
       color: #ffd700;
     }
 
-    @media(max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      section {
-        padding: 2rem 1rem;
-      }
-
+    @media (max-width: 768px) {
       nav img {
         height: 80px;
       }
@@ -214,44 +158,40 @@ nav img:hover {
         flex-direction: column;
         gap: 0.5rem;
       }
+
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <nav aria-label="Main navigation">
+  <nav>
     <div>
       <a href="index.html">
         <img src="logo.png" alt="Sirocco Travel Logo" />
       </a>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#destinations">Destinations</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#destinations">Destinations</a>
         <a href="contact.html">Contact</a>
         <a href="gallery.html">Gallery</a>
       </div>
     </div>
   </nav>
 
-  <header>
-    <h1 data-aos="fade-up">Welcome to Sirocco Travel</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Luxury travel experiences with a breeze of adventure</p>
-  </header>
-
   <main>
-    <section id="about" data-aos="fade-right">
-      <h2>About Us</h2>
-      <p>Sirocco Travel specializes in curating unforgettable luxury travel experiences to exotic and off-the-beaten-path destinations. Whether you're planning a romantic getaway, an adventurous escape, or a relaxing retreat, we handle every detail so you can focus on making memories.</p>
-    </section>
+    <h1>Contact Us</h1>
+    <p>Fill out the form below and our team will be in touch shortly.</p>
 
-    <section id="destinations" data-aos="fade-left">
-      <h2>Our Destinations</h2>
-      <p>Explore handpicked destinations like Santorini, the Amalfi Coast, Patagonia, Kyoto, and the Maldives — all customized to your travel style and preferences.</p>
-    </section>
-
-    <section id="contact" data-aos="fade-up">
-      <h2>Contact Us</h2>
-      <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p> 
-    </section>
+    <div class="form-wrapper">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdp0oxf7W6pFGfZq7si1lH0UVe8tiyDswWfBEbOiqY2ss5b7w/viewform?embedded=true"
+        allowfullscreen
+      >
+        Loading…
+      </iframe>
+    </div>
   </main>
 
   <footer>
@@ -262,17 +202,5 @@ nav img:hover {
       </a>
     </p>
   </footer>
-
-  <!-- Book Now Button -->
-  <a href="contact.html" class="cta-button">Book Now</a>
-
-  <!-- AOS Animation Script -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
 </body>
 </html>
