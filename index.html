@@ -32,6 +32,34 @@
       scroll-behavior: smooth;
     }
 
+    .logo-intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--light-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.8s ease-out;
+    }
+
+    .logo-intro img {
+      width: 300px;
+      transition: transform 1s ease-out;
+    }
+
+    .logo-intro.shrink img {
+      transform: scale(0.25);
+    }
+
+    .logo-intro.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     nav {
       background: var(--primary);
       display: flex;
@@ -62,13 +90,12 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-nav img:hover {
-  transform: scale(1.04);
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.5),
-    inset 0 0 8px rgba(255, 255, 255, 0.3);
-}
-
+    nav img:hover {
+      transform: scale(1.04);
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 8px rgba(255, 255, 255, 0.3);
+    }
 
     .nav-links {
       display: flex;
@@ -215,6 +242,11 @@ nav img:hover {
   </style>
 </head>
 <body>
+  <!-- Logo Intro Overlay -->
+  <div class="logo-intro" id="logoIntro">
+    <img src="logo.png" alt="Sirocco Travel Logo">
+  </div>
+
   <nav aria-label="Main navigation">
     <div>
       <a href="index.html">
@@ -247,7 +279,7 @@ nav img:hover {
 
     <section id="contact" data-aos="fade-up">
       <h2>Contact Us</h2>
-      <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p> 
+      <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p>  
     </section>
   </main>
 
@@ -270,6 +302,15 @@ nav img:hover {
       duration: 1000,
       once: true,
     });
+
+    // Logo Intro Animation
+    const logoIntro = document.getElementById('logoIntro');
+    setTimeout(() => {
+      logoIntro.classList.add('shrink');
+    }, 500);
+    setTimeout(() => {
+      logoIntro.classList.add('fade-out');
+    }, 1800);
   </script>
 </body>
 </html>
