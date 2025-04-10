@@ -8,6 +8,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --primary: #121212;
@@ -158,11 +159,8 @@
       background: url('https://plus.unsplash.com/premium_photo-1702598903204-cb02a8271097?w=1200&auto=format') no-repeat center center/cover;
     }
 
-    #contact iframe {
-      width: 100%;
-      height: 700px;
-      border: none;
-      border-radius: 12px;
+    #contact {
+      text-align: center;
     }
 
     footer {
@@ -171,6 +169,28 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+    }
+
+    .instagram-link {
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .instagram-link i {
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .instagram-link:hover {
+      color: #ffd700;
+    }
+
+    .instagram-link:hover i {
+      color: #ffd700;
     }
 
     @media(max-width: 768px) {
@@ -197,9 +217,8 @@
   <nav aria-label="Main navigation">
     <div>
       <a href="index.html">
-  <img src="logo.png" alt="Sirocco Travel Logo" />
-</a>
-
+        <img src="logo.png" alt="Sirocco Travel Logo" />
+      </a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#destinations">Destinations</a>
@@ -225,21 +244,19 @@
     </section>
 
     <section id="contact" data-aos="fade-up">
-  <h2>Contact Us</h2>
-  <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p>
+      <h2>Contact Us</h2>
+      <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p>
     </section>
-  
   </main>
 
-<footer>
-  <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
-  <p>
-    <a href="https://www.instagram.com/sirocco_photo" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">
-      Follow us on Instagram
-    </a>
-  </p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
+    <p>
+      <a href="https://www.instagram.com/sirocco_photo" class="instagram-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Follow us on Instagram
+      </a>
+    </p>
+  </footer>
 
   <!-- Book Now Button -->
   <a href="contact.html" class="cta-button">Book Now</a>
