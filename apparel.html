@@ -93,28 +93,36 @@
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
+      justify-content: center;
+    }
+
+    .gallery .product-card {
+      flex: 1 1 300px;
+      max-width: 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .gallery img {
       width: 100%;
       height: auto;
-      border-radius: 12px;
       object-fit: cover;
-      max-height: 320px;
     }
 
-    .product-card {
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+    .product-card .p-4 {
+      padding: 1rem;
     }
 
     .product-card:hover {
-      transform: scale(1.03);
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
     }
 
     @media(max-width: 768px) {
@@ -148,7 +156,7 @@
 
   <!-- Hero Section -->
   <section style="padding: 0; max-width: none;">
-    <div class="relative h-screen bg-cover bg-center" style="background-image: url('apparel.png');">
+    <div class="relative h-[80vh] bg-cover bg-center" style="background-image: url('apparel.png');">
       <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <h1 class="text-5xl font-bold text-white text-center">Sirocco Travel Apparel</h1>
       </div>
@@ -160,7 +168,7 @@
     <h2 class="text-3xl font-semibold text-center mb-12">Our Curated Luxury Collection</h2>
     <div class="gallery">
       <div class="product-card">
-        <img src="hat2.png" alt="White Luxury Cap">
+        <img src="hat1.png" alt="White Luxury Cap">
         <div class="p-4">
           <h3 class="text-xl font-semibold">White Logo Cap</h3>
           <p class="text-gray-600">A stylish, high-end cap perfect for sunny beach days.</p>
