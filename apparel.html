@@ -86,6 +86,37 @@
       text-decoration: underline;
     }
 
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      max-height: 320px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
     @media(max-width: 768px) {
       nav img {
         height: 80px;
@@ -116,32 +147,34 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative h-screen bg-cover bg-center" style="background-image: url('apparel.png');">
-    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <h1 class="text-5xl font-bold text-white text-center">Sirocco Travel Apparel</h1>
+  <section style="padding: 0; max-width: none;">
+    <div class="relative h-screen bg-cover bg-center" style="background-image: url('apparel.png');">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <h1 class="text-5xl font-bold text-white text-center">Sirocco Travel Apparel</h1>
+      </div>
     </div>
   </section>
 
   <!-- Product Gallery -->
-  <section class="py-16 px-6 max-w-7xl mx-auto">
+  <section>
     <h2 class="text-3xl font-semibold text-center mb-12">Our Curated Luxury Collection</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-        <img src="hat1.png" alt="White Luxury Cap" class="w-full h-72 object-cover" loading="lazy">
+    <div class="gallery">
+      <div class="product-card">
+        <img src="hat2.png" alt="White Luxury Cap">
         <div class="p-4">
           <h3 class="text-xl font-semibold">White Logo Cap</h3>
           <p class="text-gray-600">A stylish, high-end cap perfect for sunny beach days.</p>
         </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-        <img src="apparel.png" alt="Polo Set" class="w-full h-72 object-cover" loading="lazy">
+      <div class="product-card">
+        <img src="apparel.png" alt="Polo Set">
         <div class="p-4">
           <h3 class="text-xl font-semibold">Elegant Beachwear Set</h3>
           <p class="text-gray-600">Includes polo, cap, and logo flip-flops designed for luxury travel.</p>
         </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-        <img src="robe1.png" alt="Lake Como Robe" class="w-full h-72 object-cover" loading="lazy">
+      <div class="product-card">
+        <img src="robe1.png" alt="Lake Como Robe">
         <div class="p-4">
           <h3 class="text-xl font-semibold">Lake Como Robe</h3>
           <p class="text-gray-600">Luxury hotel robe near the lake, embroidered with the Sirocco Travel logo.</p>
@@ -151,7 +184,7 @@
   </section>
 
   <!-- Call to Action / Interest Form -->
-  <section class="bg-gray-100 py-16 px-6">
+  <section class="bg-gray-100">
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="text-2xl font-bold mb-4">Interested in Pre-Ordering?</h2>
       <p class="mb-6 text-gray-600">We're launching soon. Leave your contact and we'll notify you when our apparel goes live.</p>
