@@ -88,17 +88,13 @@
       padding: 3px;
       background: linear-gradient(145deg, #d4af37, #bfa14d);
       border-radius: 8px;
-      box-shadow:
-        0 6px 12px rgba(0, 0, 0, 0.4),
-        inset 0 0 6px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(255, 255, 255, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     nav img:hover {
       transform: scale(1.04);
-      box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.5),
-        inset 0 0 8px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.3);
     }
 
     .nav-links {
@@ -182,13 +178,6 @@
       padding: 4rem 2rem;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
-<section data-aos="fade-up" style="text-align: center; margin-top: 2rem;">
-  <h2 style="color: var(--accent); margin-bottom: 1rem;">Start Planning Your Escape</h2>
-  <p style="margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-    Ready to turn your dream destination into reality? Book flights, hotels, and car rentals through our trusted partners — all in one place.
-  </p>
-  <a href="book.html" class="cta-button" style="position: static; margin-top: 1rem;">Book with Us</a>
-</section>
 
     #about {
       background: url('https://plus.unsplash.com/premium_photo-1697729707449-8de5d66c5a83?w=1200&auto=format') no-repeat center center/cover;
@@ -261,26 +250,25 @@
 </script>
 </head>
 <body>
+
   <!-- Logo Intro Overlay -->
   <div class="logo-intro" id="logoIntro">
     <img src="logo.png" alt="Sirocco Travel Logo">
   </div>
 
   <!-- Navigation -->
-  <nav aria-label="Main navigation">
+  <nav>
     <div>
-      <a href="index.html">
-        <img src="logo.png" alt="Sirocco Travel Logo" />
-      </a>
-<div class="nav-links">
-  <a href="#about">About</a>
-  <a href="#destinations">Destinations</a>
-  <a href="contact.html">Contact</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="apparel.html">Apparel</a>
-  <a href="book.html">Book</a> <!-- ✅ Book Menu Link Added -->
-</div>
-
+      <a href="index.html"><img src="logo.png" alt="Sirocco Travel Logo" /></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#destinations">Destinations</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="apparel.html">Apparel</a>
+        <a href="book.html">Book</a>
+      </div>
+    </div>
   </nav>
 
   <header>
@@ -299,9 +287,18 @@
       <p>Explore handpicked destinations like Santorini, the Amalfi Coast, Patagonia, Kyoto, and the Maldives — all customized to your travel style and preferences.</p>
     </section>
 
+    <!-- Monetized CTA Section -->
+    <section data-aos="fade-up" style="text-align: center; margin-top: 2rem;">
+      <h2 style="color: var(--accent); margin-bottom: 1rem;">Start Planning Your Escape</h2>
+      <p style="margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Ready to turn your dream destination into reality? Book flights, hotels, and car rentals through our trusted partners — all in one place.
+      </p>
+      <a href="book.html" class="cta-button" style="position: static; margin-top: 1rem;">Book with Us</a>
+    </section>
+
     <section id="contact" data-aos="fade-up">
       <h2>Contact Us</h2>
-      <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p>
+      <p>Email us at <a href="mailto:contact@sirocco.travel">contact@sirocco.travel</a> or call us at (872) 256-2884 to start planning your next journey.</p> 
     </section>
   </main>
 
