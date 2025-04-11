@@ -22,10 +22,15 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Cinzel', serif;
       background-color: var(--light-bg);
       color: #333;
+      line-height: 1.6;
     }
 
     nav {
@@ -34,6 +39,10 @@
       justify-content: center;
       align-items: center;
       padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
 
     nav > div {
@@ -98,7 +107,7 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
 
     .instagram-link {
@@ -121,6 +130,28 @@
 
     .instagram-link:hover i {
       color: #ffd700;
+    }
+
+    .cta-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--accent);
+      color: var(--primary);
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--hover-accent);
+      transform: translateY(-2px);
     }
 
     @media (max-width: 768px) {
@@ -148,6 +179,8 @@
         <a href="index.html#destinations">Destinations</a>
         <a href="contact.html">Contact</a>
         <a href="gallery.html">Gallery</a>
+        <a href="apparel.html">Apparel</a>
+        <a href="book.html">Book</a>
       </div>
     </div>
   </nav>
@@ -161,8 +194,7 @@
     <iframe src="https://cdn.lightwidget.com/widgets/23764f7a9f6d57eb8f1b32aab06f2cff.html"
             scrolling="no"
             allowtransparency="true"
-            class="lightwidget-widget"
-            style="width:100%;border:0;overflow:hidden;">
+            class="lightwidget-widget">
     </iframe>
   </main>
 
@@ -174,7 +206,8 @@
       </a>
     </p>
   </footer>
-  <!-- Book Now Button -->
-  <a href="contact.html" class="cta-button" style="position: fixed; bottom: 20px; right: 20px; background-color: var(--accent); color: var(--primary); padding: 0.75rem 1.5rem; font-size: 1.1rem; font-weight: bold; border: none; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); z-index: 1000; transition: background-color 0.3s ease, transform 0.2s ease;">Book Now</a>
+
+  <!-- Book Now Floating Button -->
+  <a href="contact.html" class="cta-button">Book Now</a>
 </body>
 </html>
