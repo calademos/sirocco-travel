@@ -6,76 +6,113 @@
   <title>Book Your Trip – Sirocco Travel</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --primary: #121212;
+      --accent: #d4af37;
+      --light-bg: #fdf6e3;
+      --hover-accent: #f0e6c8;
+      --text-dark: #333;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Cinzel', serif;
-      background-color: #fdf6e3;
-      color: #333;
-      text-align: center;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 2rem;
     }
+
     h1, h2 {
-      color: #d4af37;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 1rem;
     }
+
+    p {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+    }
+
     section {
-      margin: 4rem 0;
-    }
-    .widget-container {
+      background-color: white;
+      padding: 3rem 2rem;
       margin: 2rem auto;
-      max-width: 900px;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-    a.back-home {
-      display: inline-block;
+
+    .widget-container {
       margin-top: 2rem;
+    }
+
+    .back-home {
+      display: block;
+      width: fit-content;
+      margin: 3rem auto 1rem auto;
       text-decoration: none;
-      color: #d4af37;
-      border: 1px solid #d4af37;
-      padding: 0.5rem 1rem;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.6rem 1.2rem;
       border-radius: 8px;
       transition: all 0.3s ease;
     }
-    a.back-home:hover {
-      background-color: #d4af37;
+
+    .back-home:hover {
+      background-color: var(--accent);
       color: #fff;
     }
   </style>
 </head>
 <body>
-  <h1>Book Your Next Adventure</h1>
-  <p>Explore, plan, and book your trip — powered by Sirocco’s trusted travel partners.</p>
 
-  <!-- 🛏️ Hotel Widget -->
+  <h1>Book Your Next Escape</h1>
+  <p>Explore and book flights, stays, experiences, and more — all curated through Sirocco Travel’s trusted partners.</p>
+
+  <!-- Hotels -->
   <section>
-    <h2>🛏️ Find the Perfect Stay</h2>
+    <h2>Find the Perfect Stay</h2>
+    <p>Discover boutique hotels and unique stays across the globe.</p>
     <div class="widget-container">
       <script async src="https://tp.media/content?trs=406687&shmarker=622409&locale=en&curr=USD&searchUrl=hotels&color_button=%23d4af37&color_button_text=%23ffffff&color_border=%23d4af37&plain=true&powered_by=true&promo_id=4045&campaign_id=121" charset="utf-8"></script>
     </div>
   </section>
 
-  <!-- ✈️ Flight Widget -->
+  <!-- Flights -->
   <section>
-    <h2>✈️ Book Flights</h2>
+    <h2>Book Flights</h2>
+    <p>Plan your journey with flights at the best available rates.</p>
     <div class="widget-container">
       <script async src="https://tp.media/content?trs=406687&shmarker=622409&locale=en&curr=USD&powered_by=true&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
     </div>
   </section>
 
-  <!-- 🎡 Tours & Activities Widget -->
+  <!-- Experiences -->
   <section>
-    <h2>🎡 Top Experiences</h2>
+    <h2>Top Experiences</h2>
+    <p>Book day trips, local guides, cultural highlights, and unforgettable excursions.</p>
     <div class="widget-container">
       <script async src="https://tp.media/content?trs=406687&shmarker=622409&locale=en&curr=USD&powered_by=true&promo_id=4042&campaign_id=121" charset="utf-8"></script>
     </div>
   </section>
 
-  <!-- 🚗 Car Rentals Widget -->
+  <!-- Car Rentals -->
   <section>
-    <h2>🚗 Car Rentals</h2>
+    <h2>Car Rentals</h2>
+    <p>Drive with confidence — find reliable car rentals anywhere in the world.</p>
     <div class="widget-container">
       <script async src="https://tp.media/content?trs=406687&shmarker=622409&locale=en&curr=USD&powered_by=true&promo_id=4043&campaign_id=121" charset="utf-8"></script>
     </div>
   </section>
 
   <a href="index.html" class="back-home">← Back to Home</a>
+
 </body>
 </html>
