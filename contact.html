@@ -22,11 +22,15 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Cinzel', serif;
       background-color: var(--light-bg);
       color: #333;
-      scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
     nav {
@@ -35,6 +39,10 @@
       justify-content: center;
       align-items: center;
       padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
 
     nav > div {
@@ -124,7 +132,7 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
 
     .instagram-link {
@@ -176,6 +184,8 @@
         <a href="index.html#destinations">Destinations</a>
         <a href="contact.html">Contact</a>
         <a href="gallery.html">Gallery</a>
+        <a href="apparel.html">Apparel</a>
+        <a href="book.html">Book</a>
       </div>
     </div>
   </nav>
