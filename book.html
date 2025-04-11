@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Book Flights, Hotels & Rentals – Sirocco Travel</title>
   <meta name="description" content="Book trusted flights, hotels, and car rentals with our affiliate partners. Your luxury travel starts here with Sirocco Travel.">
+  <meta property="og:title" content="Book Travel with Sirocco – Flights, Hotels, Rentals" />
+  <meta property="og:description" content="Book luxury flights, stays, and rentals with Sirocco Travel’s affiliate partners." />
+  <meta property="og:image" content="https://sirocco.travel/logo.png" />
+  <meta property="og:url" content="https://sirocco.travel/book.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book Your Trip with Sirocco Travel" />
+  <meta name="twitter:description" content="Find the best luxury deals on flights, hotels, and rentals with our trusted partners." />
+  <meta name="twitter:image" content="https://sirocco.travel/logo.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Sirocco Travel",
+    "url": "https://sirocco.travel/book.html",
+    "logo": "https://sirocco.travel/logo.png",
+    "sameAs": ["https://www.instagram.com/sirocco_photo"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-872-256-2884",
+      "contactType": "Customer Service",
+      "areaServed": "US",
+      "availableLanguage": ["English", "Spanish", "Portuguese"]
+    }
+  }
+  </script>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -16,24 +42,14 @@
       --hover-accent: #f0e6c8;
       --text-dark: #333;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Cinzel', serif;
       background-color: var(--light-bg);
       color: var(--text-dark);
       line-height: 1.6;
     }
-
     nav {
       background: var(--primary);
       display: flex;
@@ -45,7 +61,6 @@
       z-index: 900;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
-
     nav > div {
       display: flex;
       align-items: center;
@@ -54,31 +69,21 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
-
     nav img {
       height: 100px;
       margin-right: 2rem;
       padding: 3px;
       background: linear-gradient(145deg, #d4af37, #bfa14d);
       border-radius: 8px;
-      box-shadow:
-        0 6px 12px rgba(0, 0, 0, 0.4),
-        inset 0 0 6px rgba(255, 255, 255, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 0 6px rgba(255, 255, 255, 0.2);
     }
-
     nav img:hover {
       transform: scale(1.04);
-      box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.5),
-        inset 0 0 8px rgba(255, 255, 255, 0.3);
     }
-
     .nav-links {
       display: flex;
       gap: 1.5rem;
     }
-
     nav a {
       color: var(--accent);
       text-decoration: none;
@@ -86,29 +91,18 @@
       font-size: 1.1rem;
       transition: color 0.3s ease;
     }
-
     nav a:hover {
       color: var(--hover-accent);
       text-decoration: underline;
     }
-
     main {
       max-width: 1000px;
       margin: auto;
       padding: 4rem 2rem;
       text-align: center;
     }
-
-    h1, h2 {
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-
-    p {
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
-    }
-
+    h1, h2 { color: var(--accent); margin-bottom: 1rem; }
+    p { max-width: 800px; margin: 0 auto 2rem auto; }
     section {
       background-color: white;
       padding: 3rem 2rem;
@@ -117,11 +111,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-
-    .widget-container {
-      margin-top: 2rem;
-    }
-
+    .widget-container { margin-top: 2rem; }
     .back-home {
       display: block;
       width: fit-content;
@@ -133,12 +123,7 @@
       border-radius: 8px;
       transition: all 0.3s ease;
     }
-
-    .back-home:hover {
-      background-color: var(--accent);
-      color: #fff;
-    }
-
+    .back-home:hover { background-color: var(--accent); color: #fff; }
     footer {
       background: var(--primary);
       color: var(--accent);
@@ -147,7 +132,6 @@
       font-size: 0.9rem;
       margin-top: 4rem;
     }
-
     .instagram-link {
       color: var(--accent);
       text-decoration: none;
@@ -156,20 +140,9 @@
       gap: 8px;
       transition: color 0.3s ease;
     }
-
-    .instagram-link i {
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
-    }
-
-    .instagram-link:hover {
-      color: #ffd700;
-    }
-
-    .instagram-link:hover i {
-      color: #ffd700;
-    }
-
+    .instagram-link i { font-size: 1.2rem; transition: color 0.3s ease; }
+    .instagram-link:hover { color: #ffd700; }
+    .instagram-link:hover i { color: #ffd700; }
     .support-button {
       position: fixed;
       bottom: 20px;
@@ -184,31 +157,18 @@
       z-index: 1000;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
     .support-button:hover {
       background-color: var(--hover-accent);
       transform: translateY(-2px);
     }
-
     @media(max-width: 768px) {
-      nav img {
-        height: 80px;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
+      nav img { height: 80px; }
+      .nav-links { flex-direction: column; gap: 0.5rem; }
+      h1 { font-size: 2rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Navigation -->
   <nav>
     <div>
       <a href="index.html"><img src="logo.png" alt="Sirocco Travel Logo" /></a>
@@ -222,13 +182,9 @@
       </div>
     </div>
   </nav>
-
-  <!-- Main Content -->
   <main>
     <h1>Book Your Next Escape</h1>
     <p>Explore and book flights, stays, and car rentals — all curated through Sirocco Travel’s trusted partners.</p>
-
-    <!-- ✈️ Flights -->
     <section>
       <h2>Book Flights</h2>
       <p>Start with the best flight deals to your next dream destination.</p>
@@ -236,8 +192,6 @@
         <script async src="https://tp.media/content?trs=406687&shmarker=622409&locale=en&curr=USD&powered_by=true&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
       </div>
     </section>
-
-    <!-- 🏨 Hotels -->
     <section>
       <h2>Find the Perfect Stay</h2>
       <p>From chic boutiques to breathtaking resorts — browse stays to match your style.</p>
@@ -245,8 +199,6 @@
         <script async src="https://c121.travelpayouts.com/content?trs=406687&shmarker=622409&lang=www&layout=S10391&powered_by=true&promo_id=4038" charset="utf-8"></script>
       </div>
     </section>
-
-    <!-- 🚗 Car Rentals -->
     <section>
       <h2>Car Rentals</h2>
       <p>Plan with ease — find affordable and reliable car rentals worldwide.</p>
@@ -254,11 +206,8 @@
         <script src="https://c222.travelpayouts.com/content?promo_id=8813&shmarker=622409&trs=406687" charset="utf-8"></script>
       </div>
     </section>
-
     <a href="index.html" class="back-home">← Back to Home</a>
   </main>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
     <p>
@@ -267,11 +216,8 @@
       </a>
     </p>
   </footer>
-
-  <!-- 💬 Floating Support Button -->
   <a href="https://www.sirocco.travel/contact.html" class="support-button" title="Need help planning?">
     <span style="margin-right: 8px;">💬</span>Need help planning?
   </a>
-
 </body>
 </html>
