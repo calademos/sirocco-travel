@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Book Your Trip – Sirocco Travel</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --primary: #121212;
@@ -20,22 +22,88 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Cinzel', serif;
       background-color: var(--light-bg);
       color: var(--text-dark);
       line-height: 1.6;
-      padding: 2rem;
+    }
+
+    nav {
+      background: var(--primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    nav > div {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav img {
+      height: 100px;
+      margin-right: 2rem;
+      padding: 3px;
+      background: linear-gradient(145deg, #d4af37, #bfa14d);
+      border-radius: 8px;
+      box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.4),
+        inset 0 0 6px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav img:hover {
+      transform: scale(1.04);
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--hover-accent);
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 2rem;
+      text-align: center;
     }
 
     h1, h2 {
       color: var(--accent);
-      text-align: center;
       margin-bottom: 1rem;
     }
 
     p {
-      text-align: center;
       max-width: 800px;
       margin: 0 auto 2rem auto;
     }
@@ -70,6 +138,37 @@
       color: #fff;
     }
 
+    footer {
+      background: var(--primary);
+      color: var(--accent);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+
+    .instagram-link {
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .instagram-link i {
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .instagram-link:hover {
+      color: #ffd700;
+    }
+
+    .instagram-link:hover i {
+      color: #ffd700;
+    }
+
     .support-button {
       position: fixed;
       bottom: 20px;
@@ -89,84 +188,84 @@
       background-color: var(--hover-accent);
       transform: translateY(-2px);
     }
+
+    @media(max-width: 768px) {
+      nav img {
+        height: 80px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <h1>Book Your Next Escape</h1>
-  <p>Explore and book flights, stays, and car rentals — all curated through Sirocco Travel’s trusted partners.</p>
-
-  <!-- ✈️ Flights -->
-  <section>
-    <h2>Book Flights</h2>
-    <p>Start with the best flight deals to your next dream destination.</p>
-    <div class="widget-container">
-      <script async src="https://tp.media/content?trs=406687&shmarker=622409&locale=en&curr=USD&powered_by=true&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
+  <!-- Navigation -->
+  <nav>
+    <div>
+      <a href="index.html"><img src="logo.png" alt="Sirocco Travel Logo" /></a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="apparel.html">Apparel</a>
+        <a href="book.html">Book</a>
+      </div>
     </div>
-  </section>
+  </nav>
 
-  <!-- 🏨 Hotels -->
-  <section>
-    <h2>Find the Perfect Stay</h2>
-    <p>From chic boutiques to breathtaking resorts — browse stays to match your style.</p>
-    <div class="widget-container">
-      <script async src="https://c121.travelpayouts.com/content?trs=406687&shmarker=622409&lang=www&layout=S10391&powered_by=true&promo_id=4038" charset="utf-8"></script>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <h1>Book Your Next Escape</h1>
+    <p>Explore and book flights, stays, and car rentals — all curated through Sirocco Travel’s trusted partners.</p>
 
-  <!-- 🚗 Car Rentals -->
-  <section>
-    <h2>Car Rentals</h2>
-    <p>Plan with ease — find affordable and reliable car rentals worldwide.</p>
-    <div class="widget-container">
-      <script src="https://c222.travelpayouts.com/content?promo_id=8813&shmarker=622409&trs=406687" charset="utf-8"></script>
-    </div>
-  </section>
+    <!-- ✈️ Flights -->
+    <section>
+      <h2>Book Flights</h2>
+      <p>Start with the best flight deals to your next dream destination.</p>
+      <div class="widget-container">
+        <script async src="https://tp.media/content?trs=406687&shmarker=622409&locale=en&curr=USD&powered_by=true&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
+      </div>
+    </section>
 
-  <a href="index.html" class="back-home">← Back to Home</a>
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
-  <p>
-    <a href="https://www.instagram.com/sirocco_photo" class="instagram-link" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-instagram"></i> Follow us on Instagram
-    </a>
-  </p>
-</footer>
+    <!-- 🏨 Hotels -->
+    <section>
+      <h2>Find the Perfect Stay</h2>
+      <p>From chic boutiques to breathtaking resorts — browse stays to match your style.</p>
+      <div class="widget-container">
+        <script async src="https://c121.travelpayouts.com/content?trs=406687&shmarker=622409&lang=www&layout=S10391&powered_by=true&promo_id=4038" charset="utf-8"></script>
+      </div>
+    </section>
 
-<!-- Footer Styles -->
-<style>
-  footer {
-    background: var(--primary);
-    color: var(--accent);
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    margin-top: 4rem;
-  }
+    <!-- 🚗 Car Rentals -->
+    <section>
+      <h2>Car Rentals</h2>
+      <p>Plan with ease — find affordable and reliable car rentals worldwide.</p>
+      <div class="widget-container">
+        <script src="https://c222.travelpayouts.com/content?promo_id=8813&shmarker=622409&trs=406687" charset="utf-8"></script>
+      </div>
+    </section>
 
-  .instagram-link {
-    color: var(--accent);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
-  }
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </main>
 
-  .instagram-link i {
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-
-  .instagram-link:hover {
-    color: #ffd700;
-  }
-
-  .instagram-link:hover i {
-    color: #ffd700;
-  }
-</style>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sirocco Travel. All rights reserved.</p>
+    <p>
+      <a href="https://www.instagram.com/sirocco_photo" class="instagram-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Follow us on Instagram
+      </a>
+    </p>
+  </footer>
 
   <!-- 💬 Floating Support Button -->
   <a href="https://www.sirocco.travel/contact.html" class="support-button" title="Need help planning?">
