@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redeem Your Travel Session – Sirocco Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cinzel', serif;
+      background: linear-gradient(to right, #fdf6e3, #f1ece0);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+    .logo-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .logo {
+      max-height: 60px;
+    }
+    h1 {
+      text-align: center;
+      color: #b0894b;
+      font-size: 28px;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    button {
+      margin-top: 30px;
+      background-color: #d4af37;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #b0894b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-section">
+      <img src="/images/fritz-logo.png" alt="Fritz Realty Group" class="logo">
+      <img src="/images/sirocco-logo.png" alt="Sirocco Travel" class="logo">
+    </div>
+    <h1>Redeem Your Complimentary Travel Session</h1>
+    <p>Brought to you by Fritz Realty Group & Sirocco Travel</p>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Full Name*</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone">
+
+      <label for="dates">Preferred Travel Dates</label>
+      <input type="text" id="dates" name="dates">
+
+      <label for="destination">Destination or Travel Idea</label>
+      <input type="text" id="destination" name="destination">
+
+      <label for="occasion">What’s the Occasion?</label>
+      <select id="occasion" name="occasion">
+        <option>New Home Celebration</option>
+        <option>Honeymoon</option>
+        <option>Family Vacation</option>
+        <option>Retirement</option>
+        <option>Other</option>
+      </select>
+
+      <label for="notes">Anything else we should know?</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+
+      <button type="submit">Book My Free Session</button>
+    </form>
+  </div>
+</body>
+</html>
